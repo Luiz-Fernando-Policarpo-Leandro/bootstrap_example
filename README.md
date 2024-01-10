@@ -8,7 +8,6 @@ This is a project based on a tutorial project by "Matheus Battisti"
 create a file called ".env" in the root of your project and add this:
 
 ```ruby
-  
   # .env
 
   USERNAMEDB = 'write the name of your database here'
