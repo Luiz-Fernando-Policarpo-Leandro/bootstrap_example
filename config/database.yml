@@ -1,0 +1,21 @@
+default: &default
+  adapter: mysql2
+  encoding: utf8mb4
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  username: root
+  password:
+  host: localhost
+
+development:
+  <<: *default
+  database: <%= ENV['DB_DEV'] %>
+
+test:
+  <<: *default
+  database: <%= ENV['DB_TEST'] %>
+
+production:
+  <<: *default
+  database: <%= ENV['DB_PROD'] %>
+  username: <%= ENV['USERNAMEDB']%>
+  password: <%= ENV["REACT_PROJECT_DATABASE_PASSWORD"] %>
