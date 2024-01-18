@@ -1,0 +1,30 @@
+[33mcommit 59b7b15c3994b16c75b7df22bdf5e46f80373105[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Merge: f940e48 5e8db7b
+Author: Luiz <105563531+Luiz-Fernando-Policarpo-Leandro@users.noreply.github.com>
+Date:   Thu Jan 18 20:29:31 2024 -0300
+
+    Merge branch 'master' of https://github.com/Luiz-Fernando-Policarpo-Leandro/bootstrap_example
+
+[33mcommit f940e485a71e36abb727ef8289fa793d3849c5fa[m
+Author: Luiz <105563531+Luiz-Fernando-Policarpo-Leandro@users.noreply.github.com>
+Date:   Thu Jan 18 20:26:57 2024 -0300
+
+    second commit
+
+[33mcommit 5e8db7bb0bc3cfc7d4d9136bcf94ca5051a9f012[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: Luiz <105563531+Luiz-Fernando-Policarpo-Leandro@users.noreply.github.com>
+Date:   Tue Jan 9 22:16:22 2024 -0300
+
+    Update README.md
+
+[33mcommit a4fd31f575b4bf17f773be87560ae6c14560e556[m
+Author: Luiz <105563531+Luiz-Fernando-Policarpo-Leandro@users.noreply.github.com>
+Date:   Tue Jan 9 22:14:29 2024 -0300
+
+    initialize my project
+
+[33mcommit 6e685c4cfab31c86d31e9c28abd9e7c00e403c6d[m
+Author: Luiz <105563531+Luiz-Fernando-Policarpo-Leandro@users.noreply.github.com>
+Date:   Tue Jan 9 21:22:06 2024 -0300
+
+    initialize my project
