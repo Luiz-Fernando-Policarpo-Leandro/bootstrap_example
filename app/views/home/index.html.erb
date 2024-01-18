@@ -1,31 +1,65 @@
-<% content_for :head do %>
+<%= content_for :head do %>
   <%= stylesheet_link_tag 'home', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/bf7e05c402.js" crossorigin="anonymous"></script>
 <% end %>
 
 <header>
   <div class="container" id="nav-container">
-    <nav class="navbar navbar-expand-lg fixed-top">
+    <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
       
       <a href="#" class="navbar-brand">
-        <%= image_tag "img/hdcagency_logo.svg", alt: "hDC Agency", id: "logo" %> HDC Agency
+        <%=  image_tag "img/hdcagency_logo.svg", id: "logo", alt: "hDC Agency"%> HDC Agency
       </a>
 
-      <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-links" 
-      aria-controls="navbar-links" aria-expanded:="false" aria-label="toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links" aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
       </button>
 
       <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
         <div class="navbar-nav">
-          <a class="nav-item nav-link" id="home-menu">Home</a>
-          <a class="nav-item nav-link" id="about-menu">About</a>
-          <a class="nav-item nav-link" id="services-menu">Services</a>
-          <a class="nav-item nav-link" id="project-menu">Project</a>
-          <a class="nav-item nav-link" id="contact-menu">Contact</a>
+          <a class="nav-item nav-link" id="home-menu" href="#">Home</a>
+          <a class="nav-item nav-link" id="about-menu" href="#">About</a>
+          <a class="nav-item nav-link" id="services-menu" href="#">Services</a>
+          <a class="nav-item nav-link" id="project-menu" href="#">Project</a>
+          <a class="nav-item nav-link" id="contact-menu" href="#">Contact</a>
         </div>
       </div>
-
     </nav>
   </div>
+</header>
 
+<main>
+  <div class="container-fluid">
+      <div id="mainSlider" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#mainSlider" data-slide-to="0" class="active"></li>
+          <li data-target="#mainSlider" data-slide-to="1"></li>
+          <li data-target="#mainSlider" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <%= 3.times do |v| %>
+            <div class="carousel-item <%= "active" if v == 0 %>">
+              <%= image_tag "img/banner" + (v+1).to_s + ".png", class: "d-block w-100", alt: @item[v][3] %>
+                <div class="carousel-caption d-md-block" >
+                    <h2><%= @item[v][0] %></h2>
+                    <p><%= @item[v][1]%></p>
+                    <a href="<%=@item[v][2] %>" class="main-btn"><%= @item[v][4]%></a>
+                </div>
+            </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#mainSlider" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#mainSlider" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+  </div>
 
+</main>

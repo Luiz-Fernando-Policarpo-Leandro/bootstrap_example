@@ -74,6 +74,4 @@ end
 
 # add gem
 
-gem "bootstrap"
-
 gem 'dotenv-rails', groups: [:development, :test]
