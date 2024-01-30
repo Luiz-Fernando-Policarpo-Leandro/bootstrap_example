@@ -31,7 +31,7 @@
 </header>
 
 <main>
-  <div class="container-fluid">
+<div class="container-fluid">
       <div id="mainSlider" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
           <li data-target="#mainSlider" data-slide-to="0" class="active"></li>
@@ -39,7 +39,7 @@
           <li data-target="#mainSlider" data-slide-to="2"></li>
         </ol>
         <div class="carousel-inner">
-          <%= 3.times do |v| %>
+          <% 3.times do |v| %>
             <div class="carousel-item <%= "active" if v == 0 %>">
               <%= image_tag "img/banner" + (v+1).to_s + ".png", class: "d-block w-100", alt: @item[v][3] %>
                 <div class="carousel-caption d-md-block" >
@@ -61,5 +61,75 @@
           <span class="sr-only">Next</span>
         </a>
   </div>
+  <!-- about the company-->
+  <div id="about-area">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="main-title">About hDC agency</h3>
+        </div>
+
+        <div class="col-md-6">
+          <%= image_tag "img/agencia.jpg", class: "img-fluid", alt: "hDC agency" %>
+        </div>
+
+        <div class="col-md-6">
+          <h3 class="about-tittle"> An agency that thinks about the future</h3>
+          <p>Our projects are adapted to the client and their purpose.</p>
+          <p>After project specification, software architects will define the best technologies for your project.</p>
+          <p>And our designers will work on your interface/layout to boost the business.</p>
+          <p>See other differences:</p>
+          <ul id="about-list">
+            <li><i class="fas fa-check"></i> Use of Machine Learning / AI</li>
+            <li><i class="fas fa-check"></i> Responsive layout for all devices</li>
+            <li><i class="fas fa-check"></i> Integration with various systems on the market</li>
+            <li><i class="fas fa-check"></i> Own payment system</li>
+            <li><i class="fas fa-check"></i> Development with agile methodology</li>
+         </ul>
+        </div>
+
+    </div>
+  </div>
+
+  <!-- company services-->
+  <div id="services-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+                <h3 class="main-title">Our specialties</h3>
+             </div>
+             <div class="col-md-4 service-box">
+               <i class="fas fa-mobile-alt"></i>
+               <h4>Native Applications</h4>
+               <p>We harness the real power of mobile devices by building native apps.</p>
+             </div>
+             <div class="col-md-4 service-box">
+               <i class="fas fa-shopping-cart"></i>
+               <h4>E-commerce</h4>
+               <p>We have our own e-commerce platform that adapts to any business rule (B2C and B2B).</p>
+             </div>
+             <div class="col-md-4 service-box">
+               <i class="fas fa-paint-brush"></i>
+               <h4>Creative Design</h4>
+               <p>Our designers are specialized in UI/UX and also have extensive experience in the software market.</p>
+             </div>
+             <div class="col-md-4 service-box">
+               <i class="fab fa-google"></i>
+               <h4>SEO Experts</h4>
+               <p>With our marketing service your website will be better positioned on Google and sell more.</p>
+             </div>
+             <div class="col-md-4 service-box">
+               <i class="fas fa-hands-helping"></i>
+               <h4>24 hour support</h4>
+               <p>You will always have someone from the team available for support, on different platforms. (chat, email, skype)</p>
+             </div>
+             <div class="col-md-4 service-box">
+               <i class="fas fa-server"></i>
+               <h4>Server experience</h4>
+               <p>We guarantee uptime and also fast response time from your website to your customer.</p>
+            </div>
+          </div>
+        </div>
+      </div>
 
 </main>

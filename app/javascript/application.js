@@ -2,11 +2,10 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
-import "jQuery"
+import "jquery"
 import "popper"
 import "bootstrap"
 
 
 import "font_awesome"
-import "@popperjs/core"
 import "paralax"
