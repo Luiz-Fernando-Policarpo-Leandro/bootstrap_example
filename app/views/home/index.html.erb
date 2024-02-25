@@ -131,5 +131,20 @@
           </div>
         </div>
       </div>
+    </div>
+  </div>
+  <!-- company data -->
+  <div id="data-area">
+    <div class="container">
+      <div class="row">
+        <% 4.times do |v| %>
+          <div class="col-md-3 col-xs-6 circle-box">
+            <div id="circle<%= ('A'.ord + v).chr %>"></div>
+            <p><%=@item_data_area[v]%></p>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
 </main>

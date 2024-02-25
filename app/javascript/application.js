@@ -9,3 +9,6 @@ import "bootstrap"
 
 import "font_awesome"
 import "paralax"
+import "./controllers/progressbar.min.js"
+
+window.location.pathname === "/" ? import('./controllers/home.js') : null;
