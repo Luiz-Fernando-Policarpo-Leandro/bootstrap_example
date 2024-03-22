@@ -87,7 +87,6 @@
             <li><i class="fas fa-check"></i> Development with agile methodology</li>
          </ul>
         </div>
-
     </div>
   </div>
 
@@ -144,7 +143,30 @@
           </div>
         <% end %>
       </div>
+      </div>
     </div>
+
+    <!--Team-->
+    <div id="team-area">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <h3 class="main-title">Team</h3>
+            </div>
+            <% 4.times do |n| %>
+            <div class="col-md-3">
+              <div class="card">
+                <img src="img/profile<%=n+1%>.jpg" class="card-img-top" alt="profile picture <%=n+1%>">
+                <div class="card-body">
+                  <h5 class="card-title"><%= @team[n][0]%> </h5>
+                  <p class="card-text"><%=@team[n][1]%></p>
+                </div>
+              </div>
+            </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
   </div>
 
 </main>
