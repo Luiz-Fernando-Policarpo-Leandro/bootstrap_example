@@ -2,6 +2,7 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
+
 import "jquery"
 import "popper"
 import "bootstrap"
@@ -12,3 +13,4 @@ import "paralax"
 import "./controllers/progressbar.min.js"
 
 window.location.pathname === "/" ? import('./controllers/home.js') : null;
+

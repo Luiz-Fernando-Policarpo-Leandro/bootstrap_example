@@ -1,24 +1,9 @@
 $(document).ready(function() {
 
-     
-
-    let dataAreaOffset = $('#data-area').offset(); // This variable stores the offset position of the element with the ID "data-area
-    let stop = 0
-
-    $(window).scroll(function(e) {
-        let scroll_ = $(window).scrollTop() // this variable gets the scroll position;
-        if((scroll_ > (dataAreaOffset.top - 900)) && stop == 0) {
-            circle_animation("circleA",1400,60)
-            circle_animation("circleB", 1550, 240)
-            circle_animation("circleC", 1650, 32)
-            circle_animation("circleD", 1850, 5243)
-            stop = 1
-        }
-    })
-        
-   
-   
-    
+    var circleA = circle_animation("circleA",1400,60);
+    var circleB = circle_animation("circleB", 1550, 240);
+    var circleC = circle_animation("circleC", 1650, 32);
+    var circleD = circle_animation("circleD", 1850, 5243);
 
     function circle_animation(circle_id, value_time, value_round){
 
@@ -28,7 +13,7 @@ $(document).ready(function() {
                 color: '#64DAF9',
                 strokeWidth: 8,
                 duration: value_time,
-               from: {color: '#AAA'},
+               from: {color: '#aaa'},
                to: {color: '#65DAF9'},
 
                 step: function(state,circle) {
@@ -37,15 +22,39 @@ $(document).ready(function() {
                     circle.setText(value);
                 }
             });
-            
-                circle_start.animate(1.0);
+            return circle_start;
 
     };
+
+    let dataAreaOffset = $('#data-area').offset(); // This variable stores the offset position of the element with the ID "data-area
+    let stop = 0
+
+    $(window).scroll(function(e) {
+        let scroll_ = $(window).scrollTop() // this variable gets the scroll position;
+        if((scroll_ > (dataAreaOffset.top - 900)) && stop == 0) {
+            circleA.animate(1.0);
+            circleB.animate(1.0);
+            circleC.animate(1.0);
+            circleD.animate(1.0);
+            stop = 1
+        }
+    })
+        
+   
+   
+    
+
+
 
     // paralax
 
     setTimeout(function() {
-        $('#data-area').parallax({ imageSrc: 'img/cidadeparallax.png'})
-    },250);
+        $('#data-area').parallax({ imageSrc: 'img/cidadeparallax.png'});
+        $('#apply-area').parallax({ imageSrc: 'img/pattern.png'});
+    },200);
+
     
+
+
+
 });
