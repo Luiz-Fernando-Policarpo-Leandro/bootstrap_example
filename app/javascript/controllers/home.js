@@ -36,7 +36,7 @@ $(document).ready(function() {
             circleB.animate(1.0);
             circleC.animate(1.0);
             circleD.animate(1.0);
-            stop = 1
+            stop = 1 // this stop the virification
         }
     })
         
