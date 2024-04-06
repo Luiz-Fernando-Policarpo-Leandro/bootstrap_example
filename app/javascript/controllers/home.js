@@ -55,6 +55,32 @@ $(document).ready(function() {
 
     
 
+    // portifolio filter
+
+    $('.filter-btn').on('click',function(){
+
+        let type = $(this).attr('id');
+        let boxes = $('.project-box');
+
+        $('.main-btn').removeClass('active');
+        $(this).addClass('active');
+
+        type = type.slice(0,-4)
+
+        if(type == 'all') {
+            $(boxes).fadeIn();
+          } else {
+            $(boxes).each(function() {
+              if(!$(this).hasClass(type)) {
+                $(this).fadeOut('slow');
+              } else {
+                $(this).fadeIn();
+              }
+            });
+          }
+
+    });
+
 
 
 });
